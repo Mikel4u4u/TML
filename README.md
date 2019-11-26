@@ -151,7 +151,8 @@ def a_h(self, x):
  </table>
  
  Пример работы алгоритма Надарая-Ватсона и LOWESS на одинаковой выборке с квартическим ядром:
-
+![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/загружено%20.png)
+![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/загружено%20(1).png)
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/загружено%20(3).png)
 
 ### Линейная регрессия
