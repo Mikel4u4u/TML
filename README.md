@@ -77,7 +77,6 @@ def a_h(self, x):
       <td align = center><b>Ядро</b></td>
       <td align = center><b>LOO_min</b></td>
       <td align = center><b>h_opt</b></td>
-      <td align = center><b>SSE</b></td>
    </tr>
    
    <tr>
