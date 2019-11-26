@@ -187,7 +187,6 @@ def a_h(self, x):
 
 ![alt text](https://github.com/SokolovaOksana/TML/blob/master/LinearRegression/LinearRegression.png)
 
-### Сингулярное разложение (SVD)
 
 
 ### Проблема мультиколлинеарности
