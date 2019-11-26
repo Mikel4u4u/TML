@@ -194,42 +194,6 @@ def _findAlpha(self):
 
 ### Сингулярное разложение (SVD)
 
-Произвольная матрица размера *lxn* ранга *n* представима в виде ***сингулярного разложения***:
-
-![alt text](https://latex.codecogs.com/gif.latex?F%20%3D%20VDU%5ET), где:
-
-- ![alt text](https://latex.codecogs.com/gif.latex?D%20%3D%20diag%28%5Csqrt%7B%5Clambda_1%7D%2C%20...%2C%20%5Csqrt%7B%5Clambda_n%7D%29_%7Bnxn%7D), где ![alt text](https://latex.codecogs.com/gif.latex?%5Clambda_1%2C%20...%2C%20%5Clambda_n) — ненулевые собственные значения матриц ![alt text](https://latex.codecogs.com/gif.latex?F%5ETF) и ![alt text](https://latex.codecogs.com/gif.latex?FF%5ET);
-- ![alt text](https://latex.codecogs.com/gif.latex?V%20%3D%20%28v_1%2C%20...%2C%20v_n%29_%7Blxn%7D) ортогональна, ![alt text](https://latex.codecogs.com/gif.latex?V%5ETV%20%3D%20I_n), состоит из собственных векторов матрицы ![alt text](https://latex.codecogs.com/gif.latex?FF%5ET);
-- ![alt text](https://latex.codecogs.com/gif.latex?U%20%3D%20%28u_1%2C%20...%2C%20u_n%29_%7Bnxn%7D) ортогональна, ![alt text](https://latex.codecogs.com/gif.latex?U%5ETU%20%3D%20I_n), состоит из собственных векторов матрицы ![alt text](https://latex.codecogs.com/gif.latex?F%5ETF).
-
-Имея сингулярное разложение, можно легче получить решение задачи наименьших квадратов, не прибегая к трудоёмкой операции обращения матриц:
-
-![alt text](https://latex.codecogs.com/gif.latex?%5Calpha%5E*%20%3D%20%28F%5ETF%29%5E%7B-1%7DF%5ETy%20%3D%20%28UDV%5ETVDU%5ET%29%5E%7B-1%7DUDV%5ETy%20%3D%20UD%5E%7B-1%7DV%5ETy%20%3D%20%5Csum_%7Bj%20%3D%201%7D%5E%7Bn%7D%5Cfrac%7B1%7D%7B%5Csqrt%7B%5Clambda_j%7D%7Du_j%28v_%7Bj%7D%5ETy%29)
-
-Реализация нахождения данного вектора с применением сингулярного разложения выглядит следующим образом:
-
-```python
-def _findAlpha(self):
-    self.V, self.D, self.U = np.linalg.svd(self.X)
-    FPlus = np.dot(np.dot(self.U, np.linalg.inv(np.diag(self.D))), np.transpose(self.V)) # псевдообратная матрица
-    self.alpha = np.dot(FPlus, self.Y)
-```
-Сравнение качества работы алгоритмов линейной регрессии без и с применением сингулярного разложения представлено ниже:
-
-<table>
-   <tr>
-       <td align = center><b>Алгоритм</b></td>
-   </tr>
-   
-   <tr>
-      <td align = center><b>Linear Regression without SVD</b></td>
-      <td align = center>22061.879198</td>
-   </tr>
-   <tr>
-      <td align = center><b>Linear regression with SVD</b></td>
-      <td align = center>22061.879196</td>
-   </tr>
- </table>
 
 ### Проблема мультиколлинеарности
 
