@@ -94,10 +94,6 @@ def a_h(self, x):
    </tr>
  </table>
 
-Пример работы программы для разных ядер:
-
-![alt text](https://github.com/SokolovaOksana/TML/blob/master/Nadaray-Watson/NW_Quartic.png)
-![alt text](https://github.com/SokolovaOksana/TML/blob/master/Nadaray-Watson/NW_Gauss.png)
 
 ### LOWESS — локально взвешенное сглаживание
 
@@ -159,8 +155,8 @@ def a_h(self, x):
  
  Пример работы алгоритма Надарая-Ватсона и LOWESS на одинаковой выборке с квартическим ядром:
 
-![alt text](https://github.com/SokolovaOksana/TML/blob/master/LOWESS/NW_subsample.png)
-![alt text](https://github.com/SokolovaOksana/TML/blob/master/LOWESS/LOWESS_subsample.png)
+![alt text](https://github.com/Mikel4u4u/TML/blob/master/LOWESS/NW_subsample.png)
+![alt text](https://github.com/Mikel4u4u/TML/blob/master/LOWESS/LOWESS_subsample.png)
 
 ### Линейная регрессия
 
