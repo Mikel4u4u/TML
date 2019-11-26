@@ -220,7 +220,6 @@ def _findAlpha(self):
 <table>
    <tr>
        <td align = center><b>Алгоритм</b></td>
-       <td align = center><b>SSE</b></td>
    </tr>
    
    <tr>
