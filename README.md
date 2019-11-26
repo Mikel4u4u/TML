@@ -82,14 +82,14 @@ def a_h(self, x):
    
    <tr>
       <td align = center>Квартическое</td>
-      <td align = center>18429.15</td>
-      <td align = center>0.55</td>
+      <td align = center>6950.07</td>
+      <td align = center>1.6900</td>
       <td align = center>17411</td>
    </tr>
     <tr>
       <td align = center>Гауссовское</td>
-      <td align = center>18480.46</td>
-      <td align = center>0.2</td>
+      <td align = center>6765.90</td>
+      <td align = center>0.5</td>
       <td align = center>17317</td>
    </tr>
  </table>
@@ -141,15 +141,13 @@ def a_h(self, x):
    
    <tr>
       <td align = center><b>Формула Надарая-Ватсона</b></td>
-      <td align = center>1003,964</td>
-      <td align = center>2,32</td>
-      <td align = center>989,161</td>
+      <td align = center>7355.914</td>
+      <td align = center>1.690</td>
    </tr>
     <tr>
       <td align = center><b>LOWESS</b></td>
       <td align = center>969,613</td>
-      <td align = center>2,98</td>
-      <td align = center>730,761</td>
+      <td align = center>1,55</td>
    </tr>
  </table>
  
