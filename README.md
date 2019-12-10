@@ -217,6 +217,7 @@ def a_h(self, x):
 Каждой вершине ν дерева T ставится в соответствие предикат, касающийся значения одного из признаков. Непрерывному признаку
 <a href="https://www.codecogs.com/eqnedit.php?latex=X_{j}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X_{j}" title="X_{j}" /></a> соответствует предикат вида <a href="https://www.codecogs.com/eqnedit.php?latex=X_{j}&space;\geq&space;\partial_{j}^{v}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?X_{j}&space;\geq&space;\partial_{j}^{v}" title="X_{j} \geq \partial_{j}^{v}" /></a> , где <a href="https://www.codecogs.com/eqnedit.php?latex=\partial_{j}^{v}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\partial_{j}^{v}" title="\partial_{j}^{v}" /></a> - некоторый пороговый параметр.
 Пример работы на выборке "Ирисы Фишера" :
+
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/tree.png)
 
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/iris_tree.png)
