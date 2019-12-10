@@ -202,4 +202,4 @@ def a_h(self, x):
 где ![alt text](https://latex.codecogs.com/gif.latex?%5Clambda_%7Bmax%7D%2C%20%5Clambda_%7Bmin%7D) — максимальное и минимальное собственные значения матрицы ![alt text](https://latex.codecogs.com/gif.latex?F%5ETF).
 
 Матрица ![alt text](https://latex.codecogs.com/gif.latex?F%5ETF) считается плохо обусловленной (близкой к вырожденной), если ![alt text](https://latex.codecogs.com/gif.latex?%5Cmu%28F%5ETF%29%5Cgeqslant%2010%5E2%20..%2010%5E4).
-
+### Метод	главных	компонент
