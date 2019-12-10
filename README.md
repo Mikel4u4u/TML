@@ -154,6 +154,7 @@ def a_h(self, x):
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/загружено.png)
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/загружено%20(1).png)
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/загружено%20(3).png)
+![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/NW1.png)
 
 ### Линейная регрессия
 
