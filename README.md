@@ -221,3 +221,8 @@ def a_h(self, x):
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/tree.png)
 
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/iris_tree.png)
+
+### Adaboost
+
+
+
