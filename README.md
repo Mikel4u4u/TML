@@ -168,7 +168,7 @@ def a_h(self, x):
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/загружено%20(3).png)
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/NW1.png)
 
-### Линейная регрессия <a name="Vvonyye_opredeleniya"></a>
+### Линейная регрессия <a name="akwNN"></a>
 
 Пусть каждый объект описывается *n* числовыми признаками ![alt text](https://latex.codecogs.com/gif.latex?f_j%28x%29%2C%20f_j%3A%20X%20%5Crightarrow%20%5Cmathbb%7BR%7D%2C%20j%20%3D%201%2C%20...%2C%20n). *Линейной моделью регрессии* называется линейная комбинация признаков с коэффициентами ![alt text](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cepsilon%20%5Cmathbb%7BR%7D%5En):
 
