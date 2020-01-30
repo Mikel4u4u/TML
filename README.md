@@ -234,6 +234,7 @@ def a_h(self, x):
 
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/iris_tree.png)
 
+## Композиция алгоритмов
 ### Adaboost <a name="aStolp"></a>
 
 
