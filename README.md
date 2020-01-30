@@ -235,6 +235,10 @@ def a_h(self, x):
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/iris_tree.png)
 
 ## Композиция алгоритмов
+Определение
+Композицией алгоритмов <a href="http://latex.codecogs.com/gif.latex?a_{t}(x)&space;=&space;C(b_{t}(x)),&space;t&space;=&space;1,&space;...&space;,T" target="_blank"> , называется суперпозиция базовых алгоритмов (алгоритмических
+операторов) bt : X ! R, корректирующей операции F : RT ! R и решающего правила C : R ! Y :
+a(x) = C(F(b1(x); : : : ; bT (x)); x 2 X; где R  пространство оценок.
 ### Adaboost <a name="aStolp"></a>
 
 
