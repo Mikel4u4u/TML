@@ -1,4 +1,16 @@
-## _Задача обучения по прецедентам_ *(основная задача ТМО)*:
+<p><a href="#Vvonyye_opredeleniya">1. Задача обучения по прецедентам</a></p>
+  <p><a href="#Metricheskiye_algoritmy">2. Методы восстановления регрессии</a></p>
+  <p><a href="#a1NN">3. Непараметрическая регрессия</a></p>
+  <p><a href="#akNN">4. Формула Надарая-Ватсона</a></p>
+  <p><a href="#aLOO">5. LOWESS</a></p>
+  <p><a href="#akwNN">6. Линейная регрессия</a></p>
+  <p><a href="#aPW">7. Проблема мультиколлинеарности</a></p>
+  <p><a href="#aPF">8. Метод главных компонентa></p>
+  <p><a href="#aStolp">9. Adaboost</a></p>
+  
+
+
+## _Задача обучения по прецедентам_ *(основная задача ТМО)*: <a name="Vvonyye_opredeleniya"></a>
 
 Задано множество объектов *X* и множество допустимых ответов *Y*.
 Существует целевая функция ![alt text](https://latex.codecogs.com/gif.latex?y^*:&space;X\rightarrow&space;Y), значения которой 
@@ -9,7 +21,7 @@
 ![alt text](https://latex.codecogs.com/gif.latex?a:&space;X&space;\rightarrow&space;Y), которая приближала бы целевую функцию 
 ![alt text](https://latex.codecogs.com/gif.latex?y^*(x)), причём не только на объектах обучающей выборки, но и на всём множестве *X*.
 
-# Методы восстановления регрессии
+# Методы восстановления регрессии <a name="Metricheskiye_algoritmy"></a>
 
 *Задачей восстановления регрессии* называется задача обучения по прецедентам при ![alt text](https://latex.codecogs.com/gif.latex?Y&space;=&space;\mathbb{R}). Решающую функцию *a* называют *"функцией регрессии"*.
 
@@ -21,11 +33,11 @@
 
 ![alt text](https://latex.codecogs.com/gif.latex?\frac{\partial&space;Q}{\partial&space;\alpha}&space;(\alpha,&space;X^l)&space;=&space;2\sum_{i&space;=&space;1}^{l}(\phi(x_i,&space;\alpha)&space;-&space;y_i)\frac{\partial&space;\phi}{\partial&space;\alpha}(x_i,&space;\alpha)&space;=&space;0)
 
-## Непараметрическая регрессия (ядерное сглаживание)
+## Непараметрическая регрессия (ядерное сглаживание) <a name="a1NN"></a>
 
 *Непараметрическое восстановление регрессии* основано на той же идее, что и непараметрическое восстановление плотности распределения: значение ![alt text](https://latex.codecogs.com/gif.latex?a(x)) вычисляется для каждого объекта ![alt text](https://latex.codecogs.com/gif.latex?x) по нескольким ближайшим к нему объектам обучающей выборки. Близость объектов определяется согласно функции расстояния ![alt text](https://latex.codecogs.com/gif.latex?\rho(x,&space;x')), заданной на множестве объектов ![alt text](https://latex.codecogs.com/gif.latex?X).
 
-### Формула Надарая-Ватсона
+### Формула Надарая-Ватсона <a name="akNN"></a>
 
 Рассматривается самая простая модель регрессии ![alt text](https://latex.codecogs.com/gif.latex?\phi(x,&space;\alpha)&space;=&space;\alpha,&space;\alpha&space;\in&space;R) (*константа*). При этом, чтобы не получить тривиального решения, каждому объекту выборки ![alt text](https://latex.codecogs.com/gif.latex?x_i) назначаются *веса* согласно весовой функции ![alt text](https://latex.codecogs.com/gif.latex?w(x)). Они зависят, соответственно, от объекта ![alt text](https://latex.codecogs.com/gif.latex?x), в котором вычисляется значение ![alt text](https://latex.codecogs.com/gif.latex?a(x)&space;=&space;\phi(x,&space;\alpha)). 
 
@@ -95,7 +107,7 @@ def a_h(self, x):
  </table>
 
 
-### LOWESS — локально взвешенное сглаживание
+### LOWESS — локально взвешенное сглаживание <a name="aLOO"></a>
 
 Оценка Надарая-Ватсона чувствительна к большим одиночным выбросам. Для нахождения выбросов вычисляется *величина ошибки* ![alt text](https://latex.codecogs.com/gif.latex?\varepsilon_i&space;=&space;|a_h(x_i;&space;X^l&space;\setminus&space;\left&space;\{&space;x_i&space;\right&space;\})-y_i|). Чем она больше, тем в большей степени прецедент ![alt text](https://latex.codecogs.com/gif.latex?(x_i,&space;y_i)) является выбросом. Следовательно, таким прецедентам нужно понизить вес.
 
@@ -156,7 +168,7 @@ def a_h(self, x):
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/загружено%20(3).png)
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/NW1.png)
 
-### Линейная регрессия
+### Линейная регрессия <a name="Vvonyye_opredeleniya"></a>
 
 Пусть каждый объект описывается *n* числовыми признаками ![alt text](https://latex.codecogs.com/gif.latex?f_j%28x%29%2C%20f_j%3A%20X%20%5Crightarrow%20%5Cmathbb%7BR%7D%2C%20j%20%3D%201%2C%20...%2C%20n). *Линейной моделью регрессии* называется линейная комбинация признаков с коэффициентами ![alt text](https://latex.codecogs.com/gif.latex?%5Calpha%20%5Cepsilon%20%5Cmathbb%7BR%7D%5En):
 
@@ -190,7 +202,7 @@ def a_h(self, x):
 
 
 
-### Проблема мультиколлинеарности
+### Проблема мультиколлинеарности <a name="Vvonyye_opredeleniya"></a>
 
 Если матрица ![alt text](https://latex.codecogs.com/gif.latex?F%5ETF) имеет неполный ранг, то её обращение невозможно. В этом случае отбрасывают линейно-зависимые признаки и применяют *регуляризацию* или *метод главных компонент*.
 
@@ -203,11 +215,11 @@ def a_h(self, x):
 где ![alt text](https://latex.codecogs.com/gif.latex?%5Clambda_%7Bmax%7D%2C%20%5Clambda_%7Bmin%7D) — максимальное и минимальное собственные значения матрицы ![alt text](https://latex.codecogs.com/gif.latex?F%5ETF).
 
 Матрица ![alt text](https://latex.codecogs.com/gif.latex?F%5ETF) считается плохо обусловленной (близкой к вырожденной), если ![alt text](https://latex.codecogs.com/gif.latex?%5Cmu%28F%5ETF%29%5Cgeqslant%2010%5E2%20..%2010%5E4).
-### Метод	главных	компонент
+### Метод главных компонент <a name="aPW"></a>
 Метод Главных Компонент (англ. Principal Components Analysis, PCA) — один из основных способов уменьшить размерность данных, потеряв наименьшее количество информации. Изобретен К. Пирсоном (англ.Karl Pearson) в 1901 г. Применяется во многих областях, таких как распознавание образов, компьютерное зрение, сжатие данных и т. п. Вычисление главных компонент сводится к вычислению собственных векторов и собственных значений ковариационной матрицы исходных данных или к сингулярному разложению матрицы данных. 
 [ссылке](PCA.ipynb) , [ссылке2](PCA2.ipynb)
 
-### Решающие деревья
+### Решающие деревья <a name="aPF"></a>
 
 Решающие деревья воспроизводят логические схемы, позволяющие получить окончательное решение о классификации объекта с
 помощью ответов на иерархически организованную систему вопросов. Каждой из вершин дерева за исключением листьев соответствует
@@ -222,7 +234,7 @@ def a_h(self, x):
 
 ![alt text](https://github.com/Mikel4u4u/TML/blob/master/image/iris_tree.png)
 
-### Adaboost
+### Adaboost <a name="aStolp"></a>
 
 
 
